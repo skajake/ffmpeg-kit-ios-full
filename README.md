@@ -5,16 +5,35 @@ This repo is inspired from this discontinued ffmpeg-kit library: https://tanerse
 
 This repo is a replacement of `ffmpeg-kit` iOS
 
-# Podfile
+# Installation
 
-put this below in your `Podfile`, 
-below is replaced from: `pod 'ffmpeg-kit-ios-full'` or `pod 'ffmpeg-kit-ios-full', '6.0'` because this repo is specifically use version 6.0 for iOS
+## Swift Package Manager (Recommended)
+
+In Xcode: **File → Add Package Dependencies** → Enter the repository URL:
+```
+https://github.com/skajake/ffmpeg-kit-ios-full.git
+```
+
+Or add to your `Package.swift`:
+```swift
+dependencies: [
+    .package(url: "https://github.com/skajake/ffmpeg-kit-ios-full.git", from: "6.0.0")
+]
+```
+
+Then import in your code:
+```swift
+import FFmpegKit
+```
+
+## CocoaPods
+
+Put this in your `Podfile`:
 ```
 pod 'ffmpeg-kit-ios-full', :podspec => 'https://raw.githubusercontent.com/luthviar/ffmpeg-kit-ios-full/main/ffmpeg-kit-ios-full.podspec'
 ```
 
-then just run this:
+Then run:
 ```
 pod install && pod update
 ```
-voila, your problem is gone
