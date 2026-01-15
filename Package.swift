@@ -9,14 +9,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "FFmpegKit",
-            targets: ["FFmpegKit"]
-        )
-    ],
-    targets: [
-        .target(
-            name: "FFmpegKit",
-            dependencies: [
+            name: "ffmpegkit",
+            targets: [
                 "ffmpegkit",
                 "libavcodec",
                 "libavdevice",
@@ -25,9 +19,10 @@ let package = Package(
                 "libavutil",
                 "libswresample",
                 "libswscale"
-            ],
-            path: "Sources/FFmpegKit"
-        ),
+            ]
+        )
+    ],
+    targets: [
         .binaryTarget(name: "ffmpegkit", path: "ffmpeg-kit-ios-full/ffmpegkit.xcframework"),
         .binaryTarget(name: "libavcodec", path: "ffmpeg-kit-ios-full/libavcodec.xcframework"),
         .binaryTarget(name: "libavdevice", path: "ffmpeg-kit-ios-full/libavdevice.xcframework"),

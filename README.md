@@ -23,7 +23,7 @@ dependencies: [
 
 Then import in your code:
 ```swift
-import FFmpegKit
+import ffmpegkit
 ```
 
 ## CocoaPods
